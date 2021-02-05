@@ -54,7 +54,6 @@ ____██_____██
 ║├> ${prefix}ytvideo link
 ║├> ${prefix}ytbuscar link
 ║├> ${prefix}ytbaixa link
-║├> ${prefix}play
 ║├─────────────────────
     TEMPORARIAMENTE OFF
 ║├> ${prefix}sticker|||||||||||||||||
