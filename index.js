@@ -228,18 +228,18 @@ client.on('group-participants-update', async (anu) => {
 					}
 					teks += `total : ${blocked.length}`
 					client.sendMessage(from, teks.trim(), ex
-          break 
-       case 'play':   
-	       if (!isRegister) return reply(mess.only.daftarB)
-         if (isLimit(sender)) return reply(ind.limitend(pusname))
-         reply(mess.wait)
-         play = body.slice(5)
-         anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=apivinz`)
-         if (anu.error) return reply(anu.error)
-         infomp3 = `*Cancao Encontrada!!!*\nTitulo : ${anu.result.title}\nFonte: ${anu.result.source}\nTamanho : ${anu.result.size}\n\n*ESPERE ENVIADO POR FAVOR, NAO ENVIE SPAM*`
-         buffer = await getBuffer(anu.result.thumbnail)
-         lagu = await getBuffer(anu.result.url_audio)
-         client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
-         client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
+                               break 
+                               case 'play':   
+	                               if (!isRegister) return reply(mess.only.daftarB)
+                                       if (isLimit(sender)) return reply(ind.limitend(pusname))
+                                       reply(mess.wait)
+                                       play = body.slice(5)
+                                       anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=apivinz`)
+                                       if (anu.error) return reply(anu.error)
+                                       infomp3 = `*Cancao Encontrada!!!*\nTitulo : ${anu.result.title}\nFonte: ${anu.result.source}\nTamanho : ${anu.result.size}\n\n*ESPERE ENVIADO POR FAVOR, NAO ENVIE SPAM*`
+                                       buffer = await getBuffer(anu.result.thumbnail)
+                                       lagu = await getBuffer(anu.result.url_audio)
+                                       client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
+                                       client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
                 
                 
